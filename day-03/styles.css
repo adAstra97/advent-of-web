@@ -7,6 +7,11 @@
     padding: 20px;
 }
 
+.form-container:has(:invalid) button {
+    background: gray;
+    cursor: not-allowed;
+}
+
 label {
     display: block;
     margin-bottom: 15px;
@@ -26,7 +31,13 @@ button {
     padding: 10px;
     border: none;
     border-radius: 4px;
-    background-color: gray;
+    background: linear-gradient(
+        45deg,
+        var(--green-dark) 0%,
+        var(--green-light) 50%,
+        var(--green-dark) 100%
+    );
+    color: white;
     font-size: 1rem;
-    cursor: not-allowed;
+    cursor: pointer;
 }
