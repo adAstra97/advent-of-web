@@ -7,6 +7,9 @@
     border-radius: 8px;
     background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    container-type: inline-size;
+    container-name: card;
 }
 
 .product-card {
@@ -33,4 +36,10 @@
 
 .product-description {
     color: #555;
+}
+
+@container card (min-width: 500px) {
+    .product-card {
+        flex-direction: row;
+    }
 }
